@@ -1,0 +1,17 @@
+.red{
+    color: lightcoral;
+}
+.blue{
+    color: skyblue;
+}
+.green{
+    color: lightgreen;
+}
+
+.fonter{
+    font-size: 1.5rem;
+}
+body{
+    font-family: "Architects Daughter";
+    font-size: 26px;
+}
