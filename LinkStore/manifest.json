@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "camp1",
+    "action": {
+        "default_popup": "codecamp1.html",
+        "default_icon": "unique.png"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
