@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Resume Generator</title>
+</head>
+
+<body>
+    <!-- form Page -->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2">Resume Generator</h1>
+        <p class="text-center">-by Gaurav</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Personal Information</h3>
+                <div class="form-group mt-2">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter name" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField">Phone No.</label>
+                    <input type="text" id="contactField" placeholder="Enter name" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <textarea type="text" id="addressField" placeholder="Enter name" class="form-control"
+                        rows="5"></textarea>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="">Select Your Profile</label>
+                    <input type="file" id="imgField" class="form-control">
+                </div>
+
+                <p class="text-secondary mt-2">Important Links</p>
+                <div class="form-group mt-2">
+                    <label for="fbField">Facebook id</label>
+                    <input type="text" id="fbField" placeholder="Enter name" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="gitField">Github id</label>
+                    <input type="text" id="gitField" placeholder="Enter name" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="linkField">Linkdin Id</label>
+                    <input type="text" id="linkField" placeholder="Enter name" class="form-control" rows="5">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Academic Information</h3>
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <textarea id="objectField" placeholder="Enter name" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-2" id="work">
+                    <label for="">Work Experience</label>
+                    <textarea placeholder="Enter name" class="form-control workField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="workBtn">
+                        <button onclick="addWorkField()" class="btn btn-dark">ADD</button>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="acad">
+                    <label for="">Academic Qualification</label>
+                    <textarea placeholder="Enter name" class="form-control acadField" rows="3"></textarea>
+                    <div class="container text-center mt-2" id="acadBtn">
+                        <button onclick="addAcadField()" class="btn btn-dark">ADD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCv()" class="btn btn-dark btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <!------------ template Page ------------------------>
+    <div class="container-fluid " id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <img src="./img/user.jpg" alt="" id="imgT" class="img-fluid myImg">
+                <div class="container">
+                    <p id="nameT1">Gaurav Singh</p>
+                    <p id="contactT">545646854321</p>
+                    <p id="addressT">54 carroad lalkuan</p>
+                    <hr>
+                    <p id="fbT"> <a href="">https://www.facebook.com/gaurav.karki.73700/</a> </p>
+                    <p id="gitT"> <a href="">https://github.com/Gaurav038</a> </p>
+                    <p id="linkT"> <a href="">https://Linkdin.com</a> </p>
+                </div>
+            </div>
+
+            <div class="col-md-8 py-5">
+
+                <h1 id="nameT2" class="text-center" style="font-weight: 900;"></h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectT" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, impedit expedita?
+                            Repudiandae, odit eos. Dolorem fugiat itaque maxime natus unde dolorum tempore recusandae
+                            doloribus quo dolore ipsam sequi fugit laboriosam accusantium ut, eligendi, ad est nostrum
+                            optio voluptatum dolor vel? Quia dicta inventore fugit accusamus iure rerum maxime, cum
+                            voluptas. </p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="workT">
+                           <li>Lorem ipsum doloretur adipisicing temporibus.</li>
+                           <li>Lorem ipsum doloretur adipisicing temporibus.</li>
+                           <li>Lorem ipsum doloretur adipisicing temporibus.</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                       <ul id="acadT">
+                           <li>Lorem ipsum doloretur adipisicing temporibus.</li>
+                           <li>Lorem ipsum doloretur adipisicing temporibus.</li>
+                           <li>Lorem ipsum doloretur adipisicing temporibus.</li>
+                       </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-3 text-center">
+                    <button onclick="printCv()" class="btn background">
+                        Print CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
