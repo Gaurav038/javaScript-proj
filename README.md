@@ -3,7 +3,7 @@
 
 2nd proj = Add Notes
 
-3rd proj = Todo Notes
+3rd proj = Todo Task
 
 7th proj = Car game
 
