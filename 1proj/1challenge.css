@@ -1,15 +1,8 @@
-.container-1, .container-4, .container-5{
+.container-5{
     border: 1px solid black;
     width: 75%;
     text-align: center;
     margin: 0 auto;
-}
-.box-cont-1, .flex-box-pick-color{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 20px;
-    border: 1px solid black;
 }
 .btn{
     width:90px;
@@ -23,64 +16,16 @@
 .btn-2{
     background-color: rgb(141, 54, 134);
 }
-/*-------------- challenge-2 -------------*/
-.container-2{
-    border: 1px solid red;
-    width: 75%;
-    text-align: center;
-    margin: 0 auto;
-}
 .btn-3{
     background-color: rgba(76, 238, 111, 0.863);
 }
-.box-container-2 , .black-jack-row3{
+.black-jack-row3{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 10px;
 }
-.box-container-2 img{
-    box-shadow: 0 10px 50px rgba(0,0,0,0.7);
-}
-/*-------------- challenge-3 -------------*/
 
-.container-3{
-    width: 75%;
-    text-align: center;
-    margin: 0 auto;
-    border: 1px solid blueviolet;
-}
-.box-rps{
-    border: 1px solid blueviolet;
-    display: flex;
-    justify-content: space-around;
-    height:250px;
-}
-.box-rps div{
-    border: 1px solid blueviolet;
-    margin-top: 45px;
-    width: 20%;
-    height: 80px;
-    background-color: rgba(86, 223, 177, 0.746);
-    font-size: 20px;
-}
-.box-rps div:hover{
-    background-color: rgb(233, 229, 10);
-}
-/* --------------challenge-4 ------------------- */
-.btn-one{
-   background-color:red;
-}
-.btn-two{
-    background-color:rgb(0, 255, 13);
- }
- .btn-three{
-    background-color:rgb(229, 255, 0);
- }
- .btn-four{
-    background-color:rgb(12, 193, 206);
- }
- /* --------------challenge-4 ------------------- */
 .black-jack-row1, .black-jack-row2{
     border: 1px solid black;
     display: flex;
