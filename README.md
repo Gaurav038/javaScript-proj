@@ -5,3 +5,6 @@
 
 3rd proj = Todo Notes
 
+7th proj = Car game
+
+8th proj = Resume generator
