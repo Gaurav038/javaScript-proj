@@ -1,6 +1,6 @@
 ![Screenshot (214)](https://user-images.githubusercontent.com/78479119/130429225-5ee7e989-c54b-49fe-a451-95ffa0d51f78.png)
 
-Click the heat button then user game start
+Click the heat button then user game start(until score is less than 21)
 
 then click a one time stand button, computer will play automatic.
 
