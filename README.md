@@ -1,7 +1,7 @@
 # javaScript-proj
-1st = clever programmer tut.
+1st proj = Card game.
 
-2nd = Add Notes
+2nd proj = Add Notes
 
-3rd = Todo Notes
+3rd proj = Todo Notes
 
