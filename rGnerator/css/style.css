@@ -1,6 +1,21 @@
-/* #cv-form{
-    display: none;
-} */
+*{
+    font-weight: bolder;
+}
+#cv-form{
+    background-color: #7081b9;
+}
+
+h1{
+    color: var(--white-color);
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: .7rem;
+    z-index: 2;   
+}
+
+
 #cv-template{
     display: none;
 }
@@ -10,4 +25,47 @@
 }
 .background{
     background-color: #f3c74d;
+}
+.form-group{
+    position: relative;
+    padding: 20px;
+}
+.form-group i{
+    visibility: hidden;
+    position: absolute;
+    top: 45%;
+    left: 85%;
+}
+.form-group small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+.form-group input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.form-group.success input {
+	border-color: #2ecc71;
+}
+.form-group.success textarea {
+	border-color: #2ecc71;
+}
+
+.form-group.error input {
+	border-color: #e74c3c;
+}
+.form-group.error textarea {
+	border-color: #e74c3c;
+}
+
+.form-group.error i{
+	color: #e74c3c;
+	visibility: visible;
+}
+.form-group.error small{
+	color: #e74c3c;
+	visibility: visible;
 }
