@@ -24,24 +24,67 @@ function addAcadField(){
 
 }
 function generateCv(){
-    let nameField = document.getElementById('nameField').value;
+
+    let nameField = document.getElementById('nameField').value.trim();
+
+    if(nameField  === '') {
+		setErrorFor(document.getElementById('nameField'), 'Username cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('nameField'));
+	}
     let nameT1 = document.getElementById('nameT1');
     nameT1.innerText = nameField;
 
     // direct
     document.getElementById('nameT2').innerHTML = nameField;
 
-    document.getElementById('contactT').innerHTML = document.getElementById('contactField').value;
+    let contactFieldName = document.getElementById('contactField').value;
+    if(contactFieldName  === '') {
+		setErrorFor(document.getElementById('contactField'), 'contactField cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('contactField'));
+	}
+    document.getElementById('contactT').innerHTML = contactFieldName 
 
-    document.getElementById('addressT').innerHTML = document.getElementById('addressField').value;
+    let addressFieldName = document.getElementById('addressField').value; 
+    if(addressFieldName  === '') {
+		setErrorFor(document.getElementById('addressField'), 'addressField cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('addressField'));
+	}
+    document.getElementById('addressT').innerHTML = addressFieldName;
 
-    document.getElementById('fbT').innerHTML = document.getElementById('fbField').value;
+    let fbFieldName = document.getElementById('fbField').value;
+    if(fbFieldName  === '') {
+		setErrorFor(document.getElementById('fbField'), 'fbField cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('fbField'));
+	}
+    document.getElementById('fbT').innerHTML = fbFieldName
 
-    document.getElementById('gitT').innerHTML = document.getElementById('gitField').value;
+    let gitFieldName = document.getElementById('gitField').value;
+    if(gitFieldName  === '') {
+		setErrorFor(document.getElementById('gitField'), 'gitField cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('gitField'));
+	}
+    document.getElementById('gitT').innerHTML = gitFieldName
 
-    document.getElementById('linkT').innerHTML = document.getElementById('linkField').value;
+    let linkFieldName = document.getElementById('linkField').value;
+    if(linkFieldName  === '') {
+		setErrorFor(document.getElementById('linkField'), 'linkField cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('linkField'));
+	}
+    document.getElementById('linkT').innerHTML = linkFieldName
 
-    document.getElementById('objectT').innerHTML = document.getElementById('objectField').value;
+    let objectFieldName = document.getElementById('objectField').value.trim();
+    if(objectFieldName  === '') {
+		setErrorFor(document.getElementById('objectField'), 'objectField cannot be blank');
+	} else {
+		setSuccessFor(document.getElementById('objectField'));
+	}
+    document.getElementById('objectT').innerHTML = objectFieldName
 
     let workObj = document.getElementsByClassName('workField');
     let str = '';
@@ -59,7 +102,6 @@ function generateCv(){
 
     // --------------set the img--------------------
     let file = document.getElementById('imgField').files[0];
-    console.log(file)
     let reader = new FileReader();
     reader.readAsDataURL(file);
     console.log(reader.result)
@@ -68,10 +110,23 @@ function generateCv(){
         document.getElementById('imgT').src = reader.result;
     }
 
-
     document.getElementById('cv-form').style.display = 'none';
     document.getElementById('cv-template').style.display = 'block';
 }
+
+function setErrorFor(input, message) {
+	const formGroup = input.parentElement;
+	const small = formGroup.querySelector('small');
+	formGroup.className = 'form-group error';
+	small.innerText = message;
+}
+
+function setSuccessFor(input) {
+	const formGroup = input.parentElement;
+	formGroup.className = 'form-group success';
+}
+
+
 function printCv(){
     window.print();
 }
